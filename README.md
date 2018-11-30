@@ -84,3 +84,32 @@ https://docs.mongodb.com/manual/installation/ para instalação direto na sua m�
 ```
 $ npm install mongoose --save
 ```
+
+# Material extra
+
+## Testes
+
+https://mochajs.org/
+
+https://www.chaijs.com/
+
+https://www.chaijs.com/plugins/chai-http/
+
+
+## Autenticação
+
+http://www.passportjs.org/
+
+## Boas práticas
+
+https://github.com/i0natan/nodebestpractices
+
+https://expressjs.com/en/advanced/best-practice-performance.html
+
+## Tratamento de erros
+
+https://expressjs.com/en/guide/error-handling.html
+
+## Logs/Rastreabilidade
+
+https://github.com/expressjs/morgan
