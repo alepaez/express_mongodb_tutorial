@@ -9,6 +9,12 @@ mongoose.connect('mongodb://localhost/notes', { useNewUrlParser: true });
 const Notes = mongoose.model('notes', {title: String, description: String});
 
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// Formulário HTML
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/public/index.html');
+});
 
 // CRUD
 // CREATE => POST
@@ -67,10 +73,5 @@ app.delete('/notes/:id', (req, res) => {
     .catch(_ => res.status(500).send({message: "Algo de errado aconteceu"}));
 });
 
-app.use('/', (req, res) => {
-
-  res.send("Hello World!");
-
-});
 
 app.listen(3000);
