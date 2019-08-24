@@ -9,7 +9,7 @@ mongoose.connect('mongodb://localhost/notes', { useNewUrlParser: true });
 const Notes = mongoose.model('notes', {title: String, description: String});
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Formulário HTML
 app.get('/', (req, res) => {
